@@ -16,12 +16,7 @@
           <h1 id="create-title" class="title">Create Your Account</h1>
           <p class="subtitle">Welcome back! Please enter your details</p>
 
-          <button class="btn btn--google" type="button">
-            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="" class="icon" />
-            <span>Sign up with Google</span>
-          </button>
-
-          <div class="divider" role="separator" aria-label="or">OR</div>
+          
 
           <form id="register-form" novalidate>
             <label class="field">
@@ -59,20 +54,15 @@
               <span class="field__error" aria-live="polite"></span>
             </label>
 
-            <label class="check">
-              <input type="checkbox" name="pwd" />
-              <span>PWD?</span>
+            <label class="field">
+              <span class="field__label">PWD?</span>
+              <select class="input select" name="pwd" required>
+                <option value="" selected disabled>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <span class="field__error" aria-live="polite"></span>
             </label>
-
-            <div class="field">
-              <span class="field__label">Signature</span>
-              <div class="signature">
-                <canvas id="signature" width="560" height="160"></canvas>
-                <div>
-                  <button type="button" class="btn btn--ghost" id="clear-signature">Clear</button>
-                </div>
-              </div>
-            </div>
 
             <label class="check">
               <input type="checkbox" name="terms" required />
