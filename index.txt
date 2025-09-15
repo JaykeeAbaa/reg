@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration - FillQuick Pay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel panel--form" aria-labelledby="create-title">
+        <div class="panel__inner">
+          <h1 id="create-title" class="title">Create Your Account</h1>
+          <p class="subtitle">Welcome back! Please enter your details</p>
+
+          <button class="btn btn--google" type="button">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="" class="icon" />
+            <span>Sign up with Google</span>
+          </button>
+
+          <div class="divider" role="separator" aria-label="or">OR</div>
+
+          <form id="register-form" novalidate>
+            <label class="field">
+              <span class="field__label">Name</span>
+              <input class="input" type="text" name="name" placeholder="Enter your name" autocomplete="name" required />
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input class="input" type="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field field--password">
+              <span class="field__label">Password</span>
+              <input class="input" type="password" name="password" placeholder="•••••••" autocomplete="new-password" minlength="6" required />
+              <button class="toggle-visibility" type="button" aria-label="Show password"></button>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field field--password">
+              <span class="field__label">Retype Password</span>
+              <input class="input" type="password" name="confirm" placeholder="•••••••" autocomplete="new-password" minlength="6" required />
+              <button class="toggle-visibility" type="button" aria-label="Show password"></button>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" name="terms" required />
+              <span>I accepted all <a href="#" class="link">terms &amp; conditions</a>.</span>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Sign in</button>
+
+            <p class="muted">Already have an account? <a href="#" class="link">Sign in</a></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel panel--promo" aria-labelledby="promo-title">
+        <div class="panel__inner">
+          <h2 id="promo-title" class="hero">Welcome To FillQuick Pay! Join Now For Seamless Payments</h2>
+          <p class="hero__sub">Lorem ipsum dolor sit amet consectetur. At eget feugiat in amet odio. Adipiscing at fringilla condimentum in sed. Tempus etiam est morbi in at gravida vel elementum. Ac orci ut sem massa in diam.</p>
+
+          <div class="card">
+            <div class="card__header">
+              <span>Sales Report</span>
+              <div class="legend">
+                <span class="dot dot--profit"></span>Profit
+                <span class="dot dot--expense"></span>Expenses
+              </div>
+            </div>
+            <div class="chart" aria-hidden="true">
+              <div class="bar" style="--h: 45%"></div>
+              <div class="bar" style="--h: 30%"></div>
+              <div class="bar" style="--h: 55%"></div>
+              <div class="bar" style="--h: 35%"></div>
+              <div class="bar" style="--h: 65%"></div>
+              <div class="bar" style="--h: 40%"></div>
+              <div class="bar" style="--h: 70%"></div>
+              <div class="bar" style="--h: 50%"></div>
+              <div class="bar" style="--h: 75%"></div>
+              <div class="bar" style="--h: 60%"></div>
+              <div class="bar" style="--h: 78%"></div>
+              <div class="bar" style="--h: 68%"></div>
+            </div>
+          </div>
+
+          <div class="dots" aria-hidden="true">
+            <span class="dot is-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

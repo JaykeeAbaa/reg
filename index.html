@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration - FillQuick Pay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel panel--form" aria-labelledby="create-title">
+        <div class="panel__inner">
+          <h1 id="create-title" class="title">Create Your Account</h1>
+          <p class="subtitle">Welcome back! Please enter your details</p>
+
+          <button class="btn btn--google" type="button">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="" class="icon" />
+            <span>Sign up with Google</span>
+          </button>
+
+          <div class="divider" role="separator" aria-label="or">OR</div>
+
+          <form id="register-form" novalidate>
+            <label class="field">
+              <span class="field__label">Name</span>
+              <input class="input" type="text" name="name" placeholder="Enter your name" autocomplete="name" required />
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Sex</span>
+              <select class="input select" name="sex" required>
+                <option value="" selected disabled>Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+              </select>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Age</span>
+              <input class="input" type="number" name="age" placeholder="Enter your age" min="0" max="120" required />
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Contact Number</span>
+              <input class="input" type="tel" name="contact" placeholder="e.g. 0917 123 4567" autocomplete="tel" required />
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Purpose</span>
+              <textarea class="input textarea" name="purpose" placeholder="Enter purpose" required></textarea>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" name="pwd" />
+              <span>PWD?</span>
+            </label>
+
+            <div class="field">
+              <span class="field__label">Signature</span>
+              <div class="signature">
+                <canvas id="signature" width="560" height="160"></canvas>
+                <div>
+                  <button type="button" class="btn btn--ghost" id="clear-signature">Clear</button>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
